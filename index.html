@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#101522">
-    <title>截图保存xs38.cc永不迷路</title>
+    <meta name="theme-color" content="#111426">
+    <meta name="description" content="简洁好用的个人网址导航，快速打开常用网站。">
+    <title>截图保存XS38.CC</title>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-55YP77EZ54"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -17,10 +18,7 @@
             color-scheme: dark;
             font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
             --text: #f5f7fb;
-            --muted: #d0c8e8;
-            --accent: #72f2d2;
-            --violet: #c8a7ff;
-            --sunshine: #ffe28a;
+            /* Change this URL in code to choose another background image. */
             --page-background-image: url("https://pub-59269f6abcf64dada6f3a88f29ad1192.r2.dev/1740905735.jpeg");
         }
 
@@ -29,6 +27,7 @@
         body {
             min-width: 320px;
             min-height: 100vh;
+            min-height: 100svh;
             margin: 0;
             color: var(--text);
             background: #111426;
@@ -73,6 +72,7 @@
             z-index: 2;
             width: min(1060px, calc(100% - 40px));
             min-height: 100vh;
+            min-height: 100svh;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
@@ -89,24 +89,76 @@
         }
 
         .eyebrow {
+            display: inline-block;
             margin: 0 0 16px;
-            color: #7fffe0;
-            font-size: 13px;
-            font-weight: 700;
-            letter-spacing: .12em;
-            text-shadow: 0 0 20px rgba(81, 255, 209, .55);
+            padding: 8px 15px;
+            border: 1px solid rgba(114, 242, 210, .48);
+            border-radius: 999px;
+            color: #b7ffef;
+            font-size: clamp(16px, 2.4vw, 19px);
+            font-weight: 800;
+            letter-spacing: .1em;
+            background: linear-gradient(100deg, rgba(28, 122, 111, .42), rgba(96, 63, 143, .38));
+            box-shadow: 0 0 24px rgba(81, 255, 209, .16), inset 0 1px rgba(255, 255, 255, .13);
+            text-shadow: 0 0 14px rgba(81, 255, 209, .72);
         }
 
         h1 {
             margin: 0;
-            font-size: clamp(48px, 9vw, 78px);
+            font-size: clamp(38px, 7vw, 60px);
             font-weight: 850;
             letter-spacing: -.055em;
-            color: transparent;
-            background: linear-gradient(100deg, #fff1a8 0%, #ffb6d5 42%, #c5a5ff 75%, #9cecff 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            filter: drop-shadow(0 5px 24px rgba(198, 129, 255, .34));
+            color: #ffe2ae;
+        }
+
+        @supports ((background-clip: text) or (-webkit-background-clip: text)) {
+            h1 {
+                color: transparent;
+                background: linear-gradient(100deg, #fff1a8 0%, #ffb6d5 42%, #c5a5ff 75%, #9cecff 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                filter: drop-shadow(0 5px 24px rgba(198, 129, 255, .34));
+            }
+        }
+
+        .welcome-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 11px;
+            min-height: 52px;
+            margin-top: 18px;
+            padding: 13px 24px;
+            border: 1px solid rgba(114, 242, 210, .72);
+            border-radius: 999px;
+            color: #c4fff2;
+            background: linear-gradient(110deg, rgba(21, 104, 100, .88), rgba(78, 52, 140, .88));
+            box-shadow: 0 8px 28px rgba(60, 33, 128, .32), 0 0 18px rgba(114, 242, 210, .15), inset 0 1px rgba(255, 255, 255, .18);
+            font-size: 16px;
+            font-weight: 800;
+            letter-spacing: .025em;
+            text-shadow: 0 0 12px rgba(114, 242, 210, .55);
+            text-decoration: none;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            transition: transform .18s ease, border-color .18s ease, background .18s ease;
+        }
+
+        .welcome-link:hover {
+            transform: translateY(-3px) scale(1.025);
+            border-color: #a9ffeb;
+            background: linear-gradient(110deg, rgba(23, 125, 116, .96), rgba(95, 62, 163, .96));
+            box-shadow: 0 12px 32px rgba(60, 33, 128, .42), 0 0 22px rgba(114, 242, 210, .24);
+        }
+
+        .welcome-link:focus-visible {
+            outline: 3px solid #fff0a1;
+            outline-offset: 4px;
+        }
+
+        .welcome-link svg { width: 18px; height: 18px; fill: currentColor; }
+
+        @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+            .welcome-link { background: linear-gradient(110deg, rgba(28, 74, 78, .96), rgba(54, 43, 91, .96)); }
         }
 
         .intro {
@@ -116,6 +168,16 @@
             font-size: 15px;
             line-height: 1.8;
             text-shadow: 0 1px 14px rgba(0, 0, 0, .65);
+        }
+
+        @supports ((background-clip: text) or (-webkit-background-clip: text)) {
+            .intro {
+                color: transparent;
+                background: linear-gradient(100deg, #a9ffdf 0%, #b8eaff 48%, #e0c4ff 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                filter: drop-shadow(0 1px 10px rgba(20, 12, 38, .72));
+            }
         }
 
         .links {
@@ -142,7 +204,12 @@
             text-decoration: none;
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
-            transition: transform .2s ease, border-color .2s ease, background .2s ease;
+            transition: transform .2s ease, border-color .2s ease, background .2s ease, box-shadow .2s ease;
+        }
+
+        .site-link:focus-visible {
+            outline: 3px solid #72f2d2;
+            outline-offset: 4px;
         }
 
         .site-link:hover {
@@ -173,11 +240,9 @@
         }
         .site-link:nth-child(2) .site-name { color: #91efff; text-shadow: 0 0 18px rgba(84, 220, 255, .28); }
         .site-link:nth-child(3) .site-name { color: #ffb4d7; text-shadow: 0 0 18px rgba(255, 112, 184, .28); }
-        .site-link:nth-child(4) .site-name { color: #d3b8ff; text-shadow: 0 0 18px rgba(181, 133, 255, .3); }
         .site-description { color: #b9f4e7; font-size: 13px; line-height: 1.6; }
         .site-link:nth-child(2) .site-description { color: #b8eaff; }
         .site-link:nth-child(3) .site-description { color: #ffd0e5; }
-        .site-link:nth-child(4) .site-description { color: #ddcaff; }
 
         @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
             .site-link { background: linear-gradient(110deg, rgba(23, 31, 57, .96), rgba(46, 27, 67, .94)); }
@@ -206,26 +271,26 @@
     <div class="scrim" aria-hidden="true"></div>
     <div class="page">
         <main>
-            <p class="eyebrow">如遇到打不开的情况,是拦截了,请等待即可,我们会即时更新,</p>
-            <h1>截图保存         永久域名</h1>
-            <p class="intro">牢记本站域名.如遇打不开，请等待即可。</p>
+            <p class="eyebrow">牢记入口和登录凭证.如遇打不开，请等待即可</p>
+            <h1>截图保存  X3X8.CC     永久域名</h1>
+            <a class="welcome-link" href="https://x3x8.cc" target="_blank" rel="noopener noreferrer" aria-label="在新标签页打开 Bing 搜索">
+                前往 X3X8.CC
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.4l-9.3 9.3-1.4-1.4L17.6 5H14V3ZM5 5h6v2H7v10h10v-4h2v6H5V5Z"/></svg>
+            </a>
+            <p class="intro">牢记各个平台的登录凭证,如遇到打不开的情况,是拦截了,请等待即可,我们会即时更新。</p>
 
             <nav class="links" id="links" aria-label="常用网站">
-                <a class="site-link" data-site="0" href="http://kagjzh2t.gtwjev.cn/get-landing-url" target="_blank" rel="noopener noreferrer" aria-label="迷奸偷拍视频">
+                <a class="site-link" data-site="0" href="http://rpvn67.eywe21.bdcdn.zjyxqb.cn/zz/hsfy96?ePxK" target="_blank" rel="noopener noreferrer" aria-label="打开 Google 搜索">
                     <span class="site-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7.2 3.8c-.8-.5-1.8.1-1.8 1v14.4c0 .9 1 1.5 1.8 1l11.2-7.2a1.2 1.2 0 0 0 0-2L7.2 3.8Z"/></svg></span>
-                    <span class="site-copy"><span class="site-name">幼女萝莉视频 </span><span class="site-description">劲爆 乱交 偷拍 迷奸 欧美 群交。</span></span>
+                    <span class="site-copy"><span class="site-name">太子平台点此进入</span><span class="site-description">日本 群交 约炮 偷情 深插母子 自慰 萝莉 巨人 母子  人妻 强奸 乱伦 出轨。</span></span>
                 </a>
-                <a class="site-link" data-site="1" href="http://rpvn67.eywe21.bdcdn.zjyxqb.cn/zz/hsfy96?ePxK" target="_blank" rel="noopener noreferrer" aria-label="破处乱伦视频">
+                <a class="site-link" data-site="1" href="http://kagjzh2t.gtwjev.cn/get-landing-url" target="_blank" rel="noopener noreferrer" aria-label="打开维基百科">
                     <span class="site-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7.2 3.8c-.8-.5-1.8.1-1.8 1v14.4c0 .9 1 1.5 1.8 1l11.2-7.2a1.2 1.2 0 0 0 0-2L7.2 3.8Z"/></svg></span>
-                    <span class="site-copy"><span class="site-name">幼女拳交视频</span><span class="site-description">日本 群交 约炮 偷情 深插母子 自慰 萝莉 巨人 母子。</span></span>
+                    <span class="site-copy"><span class="site-name">宝岛平台点此进入</span><span class="site-description">劲爆 乱交 偷拍 迷奸 欧美 群交 日韩 国产 学生 萝莉 重口 欧美 丝袜 无码。</span></span>
                 </a>
-                <a class="site-link" data-site="2" href="https://monitor.api.vvfly.cn/appUserPhoto/697000-698000/697222/20250916000016.html?code=RhIoBvhb" target="_blank" rel="noopener noreferrer" aria-label="人兽做爱视频">
+                <a class="site-link" data-site="2" href="https://monitor.api.vvfly.cn/appUserPhoto/697000-698000/697222/20250916000016.html?code=RhIoBvhb" target="_blank" rel="noopener noreferrer" aria-label="打开 YouTube">
                     <span class="site-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7.2 3.8c-.8-.5-1.8.1-1.8 1v14.4c0 .9 1 1.5 1.8 1l11.2-7.2a1.2 1.2 0 0 0 0-2L7.2 3.8Z"/></svg></span>
-                    <span class="site-copy"><span class="site-name">约炮偷情视频</span><span class="site-description">换妻 母子 父女 姐弟 母子 人兽。</span></span>
-                </a>
-                <a class="site-link" data-site="3" href="http://kagjzh2t.gtwjev.cn/get-landing-url" target="_blank" rel="noopener noreferrer" aria-label="母子乱伦视频">
-                    <span class="site-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7.2 3.8c-.8-.5-1.8.1-1.8 1v14.4c0 .9 1 1.5 1.8 1l11.2-7.2a1.2 1.2 0 0 0 0-2L7.2 3.8Z"/></svg></span>
-                    <span class="site-copy"><span class="site-name">乱伦人妖视频</span><span class="site-description">明星 人妖 破处 乱交 乱伦 萝莉。</span></span>
+                    <span class="site-copy"><span class="site-name">麻豆平台点此进入</span><span class="site-description">换妻 母子 父女 姐弟 母子 人兽  多P 人妖 制服 潮喷 拳交 明星SM。</span></span>
                 </a>
             </nav>
 
