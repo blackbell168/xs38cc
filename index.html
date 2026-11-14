@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#111426">
     <meta name="description" content="简洁好用的个人网址导航，快速打开常用网站。">
-    <title>截图保存XS38.CC</title>
+    <title>截图保存</title>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-55YP77EZ54"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -18,8 +18,8 @@
             color-scheme: dark;
             font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
             --text: #f5f7fb;
-            /* Change this URL in code to choose another background image. */
-            --page-background-image: url("https://888.x3x8.cc/%E4%B8%8A%E4%BC%A02.jpg");
+            /* The daily background script selects one of seven URLs below. */
+            --page-background-image: url("https://pub-5d9516ca10d842829497916b4eeb901b.r2.dev/photo_2025-06-13_00-20-02.jpg");
         }
 
         * { box-sizing: border-box; }
@@ -59,7 +59,7 @@
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
-            opacity: .42;
+            opacity: .28;
         }
 
         .scrim {
@@ -92,33 +92,29 @@
             display: inline-block;
             margin: 0 0 16px;
             padding: 8px 15px;
-            border: 1px solid rgba(114, 242, 210, .48);
+            border: 1px solid rgba(110, 255, 90, .78);
             border-radius: 999px;
-            color: #b7ffef;
+            color: #39ff14;
             font-size: clamp(16px, 2.4vw, 19px);
             font-weight: 800;
             letter-spacing: .1em;
-            background: linear-gradient(100deg, rgba(28, 122, 111, .42), rgba(96, 63, 143, .38));
-            box-shadow: 0 0 24px rgba(81, 255, 209, .16), inset 0 1px rgba(255, 255, 255, .13);
-            text-shadow: 0 0 14px rgba(81, 255, 209, .72);
+            background: linear-gradient(100deg, rgba(22, 100, 34, .44), rgba(35, 72, 43, .38));
+            box-shadow: 0 0 8px rgba(75, 255, 45, .16), inset 0 1px rgba(255, 255, 255, .13);
+            text-shadow: 0 0 3px rgba(57, 255, 20, .28), 0 1px 3px rgba(5, 25, 4, .9);
         }
 
-        h1 {
+        .welcome-banner {
+            display: block;
+            width: min(100%, 680px);
+            height: auto;
+            margin: 0 auto;
+            object-fit: contain;
+            filter: drop-shadow(0 5px 24px rgba(198, 129, 255, .34));
+        }
+
+        .welcome-heading {
+            width: 100%;
             margin: 0;
-            font-size: clamp(38px, 7vw, 60px);
-            font-weight: 850;
-            letter-spacing: -.055em;
-            color: #ffe2ae;
-        }
-
-        @supports ((background-clip: text) or (-webkit-background-clip: text)) {
-            h1 {
-                color: transparent;
-                background: linear-gradient(100deg, #fff1a8 0%, #ffb6d5 42%, #c5a5ff 75%, #9cecff 100%);
-                background-clip: text;
-                -webkit-background-clip: text;
-                filter: drop-shadow(0 5px 24px rgba(198, 129, 255, .34));
-            }
         }
 
         .welcome-link {
@@ -155,29 +151,27 @@
             outline-offset: 4px;
         }
 
-        .welcome-link svg { width: 18px; height: 18px; fill: currentColor; }
+        .welcome-link img {
+            display: block;
+            width: auto;
+            height: 30px;
+            max-width: 110px;
+            flex: 0 0 auto;
+            object-fit: contain;
+        }
 
         @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
             .welcome-link { background: linear-gradient(110deg, rgba(28, 74, 78, .96), rgba(54, 43, 91, .96)); }
         }
 
         .intro {
-            max-width: 550px;
+            max-width: 650px;
             margin: 18px 0 36px;
-            color: #e2d9f3;
-            font-size: 15px;
+            color: #8dff62;
+            font-size: clamp(17px, 2.2vw, 20px);
+            font-weight: 600;
             line-height: 1.8;
-            text-shadow: 0 1px 14px rgba(0, 0, 0, .65);
-        }
-
-        @supports ((background-clip: text) or (-webkit-background-clip: text)) {
-            .intro {
-                color: transparent;
-                background: linear-gradient(100deg, #a9ffdf 0%, #b8eaff 48%, #e0c4ff 100%);
-                background-clip: text;
-                -webkit-background-clip: text;
-                filter: drop-shadow(0 1px 10px rgba(20, 12, 38, .72));
-            }
+            text-shadow: 0 2px 14px rgba(0, 0, 0, .9), 0 0 12px rgba(90, 255, 65, .42);
         }
 
         .links {
@@ -188,22 +182,19 @@
         }
 
         .site-link {
+            position: relative;
             min-height: 116px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: flex-start;
-            gap: 20px;
-            padding: 18px 22px;
-            border: 1px solid rgba(183, 166, 255, .26);
+            display: block;
+            padding: 12px 18px;
+            border: 1px solid rgba(210, 255, 232, .24);
             border-radius: 18px;
             color: var(--text);
-            background: linear-gradient(110deg, rgba(23, 31, 57, .84), rgba(46, 27, 67, .72));
-            box-shadow: 0 16px 38px rgba(0, 0, 0, .24), inset 0 1px rgba(255, 255, 255, .07);
+            background: linear-gradient(110deg, rgba(35, 57, 64, .58), rgba(58, 43, 74, .5));
+            box-shadow: 0 16px 38px rgba(0, 0, 0, .24), inset 0 1px rgba(255, 255, 255, .12);
             text-align: left;
             text-decoration: none;
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+            backdrop-filter: blur(18px) saturate(135%);
+            -webkit-backdrop-filter: blur(18px) saturate(135%);
             transition: transform .2s ease, border-color .2s ease, background .2s ease, box-shadow .2s ease;
         }
 
@@ -214,49 +205,75 @@
 
         .site-link:hover {
             transform: translateY(-4px);
-            border-color: rgba(114, 242, 210, .78);
-            background: linear-gradient(110deg, rgba(26, 56, 70, .92), rgba(65, 36, 83, .84));
+            border-color: rgba(158, 255, 190, .68);
+            background: linear-gradient(110deg, rgba(39, 78, 70, .7), rgba(72, 48, 86, .64));
             box-shadow: 0 18px 45px rgba(39, 19, 66, .35), inset 0 1px rgba(255, 255, 255, .12);
         }
 
         .site-icon {
             display: grid;
-            flex: 0 0 58px;
-            width: 58px;
-            height: 58px;
+            position: absolute;
+            top: 50%;
+            left: 18px;
+            width: 64px;
+            height: 64px;
             place-items: center;
-            color: #ff4d5a;
-            filter: drop-shadow(0 2px 9px rgba(255, 48, 65, .42));
+            transform: translateY(-50%);
+            border: 1px solid rgba(255, 140, 155, .72);
+            border-radius: 50%;
+            color: #ff405d;
+            background: radial-gradient(circle at 30% 24%, rgba(255, 255, 255, .3), rgba(255, 92, 115, .24) 40%, rgba(72, 18, 38, .78));
+            box-shadow: 0 0 0 4px rgba(255, 75, 95, .1), 0 0 24px rgba(255, 50, 80, .38), 0 8px 18px rgba(0, 0, 0, .28), inset 0 1px 4px rgba(255, 255, 255, .35), inset 0 -4px 10px rgba(0, 0, 0, .2);
+            transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
         }
 
-        .site-icon svg { display: block; width: 46px; height: 46px; fill: currentColor; }
-        .site-copy { min-width: 0; display: grid; gap: 7px; text-align: center; }
+        .site-icon svg { display: block; width: 32px; height: 32px; fill: currentColor; filter: drop-shadow(0 1px 4px rgba(255, 35, 65, .56)); }
+        .site-link:hover .site-icon {
+            transform: translateY(-50%) scale(1.07) rotate(4deg);
+            border-color: rgba(255, 205, 212, .92);
+            box-shadow: 0 0 0 5px rgba(255, 75, 95, .14), 0 0 30px rgba(255, 50, 80, .52), 0 10px 22px rgba(0, 0, 0, .32), inset 0 1px 4px rgba(255, 255, 255, .42);
+        }
+        .site-copy {
+            min-width: 0;
+            width: 100%;
+            display: grid;
+            align-content: start;
+            gap: 7px;
+            padding: 0 74px;
+            text-align: center;
+        }
         .site-name {
-            color: #fff0a1;
+            justify-self: center;
+            padding: 5px 13px;
+            border: 1px solid rgba(166, 255, 181, .48);
+            border-radius: 999px;
+            background: rgba(26, 78, 47, .34);
+            color: #a6ffb5;
             font-size: 20px;
             font-weight: 800;
             letter-spacing: .02em;
-            text-shadow: 0 0 18px rgba(255, 204, 119, .28);
+            line-height: 1.35;
+            text-shadow: 0 0 4px rgba(112, 255, 145, .34);
         }
-        .site-link:nth-child(2) .site-name { color: #91efff; text-shadow: 0 0 18px rgba(84, 220, 255, .28); }
-        .site-link:nth-child(3) .site-name { color: #ffb4d7; text-shadow: 0 0 18px rgba(255, 112, 184, .28); }
+        .site-link:hover .site-name { filter: brightness(1.08); }
         .site-description { color: #b9f4e7; font-size: 13px; line-height: 1.6; }
         .site-link:nth-child(2) .site-description { color: #b8eaff; }
         .site-link:nth-child(3) .site-description { color: #ffd0e5; }
 
         @supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
-            .site-link { background: linear-gradient(110deg, rgba(23, 31, 57, .96), rgba(46, 27, 67, .94)); }
-            .site-link:hover { background: linear-gradient(110deg, rgba(26, 56, 70, .98), rgba(65, 36, 83, .96)); }
+            .site-link { background: linear-gradient(110deg, rgba(35, 57, 64, .96), rgba(58, 43, 74, .94)); }
+            .site-link:hover { background: linear-gradient(110deg, rgba(39, 78, 70, .98), rgba(72, 48, 86, .96)); }
         }
 
         @media (max-width: 680px) {
             .page { width: min(100% - 28px, 500px); }
             main { padding: 70px 0 42px; }
-            .intro { font-size: 14px; }
+            .intro { font-size: 16px; }
             .links { gap: 10px; }
-            .site-link { min-height: 104px; gap: 15px; padding: 15px 17px; }
-            .site-icon { flex-basis: 52px; width: 52px; height: 52px; }
-            .site-icon svg { width: 42px; height: 42px; }
+            .site-link { min-height: 104px; padding: 10px 12px; }
+            .site-icon { left: 12px; width: 56px; height: 56px; }
+            .site-icon svg { width: 28px; height: 28px; }
+            .site-copy { padding: 0 54px; }
             .site-name { font-size: 16px; }
             .site-description { font-size: 12px; }
         }
@@ -272,24 +289,24 @@
     <div class="page">
         <main>
             <p class="eyebrow">牢记入口和登录凭证.如遇打不开，请等待即可</p>
-            <h1>截图保存  X3X8.CC     永久域名</h1>
-            <a class="welcome-link" href="https://x3x8.cc" target="_blank" rel="noopener noreferrer" aria-label="在新标签页打开 Bing 搜索">
-                前往 X3X8.CC
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3h7v7h-2V6.4l-9.3 9.3-1.4-1.4L17.6 5H14V3ZM5 5h6v2H7v10h10v-4h2v6H5V5Z"/></svg>
+            <h1 class="welcome-heading"><img class="welcome-banner" src="https://pub-59269f6abcf64dada6f3a88f29ad1192.r2.dev/%E6%88%AA%E5%9B%BE%E4%BF%9D%E5%AD%98%20X3X8.CC%20%E6%B0%B8%E4%B9%85%E5%9F%9F%E5%90%8D.gif" alt="欢迎回来" width="1371" height="91"></h1>
+            <a class="welcome-link" href="https://www.bing.com/" target="_blank" rel="noopener noreferrer" aria-label="在新标签页打开 Bing 搜索">
+                前往 
+                <img src="https://pub-5d9516ca10d842829497916b4eeb901b.r2.dev/x3x8/182.142.52.19_0423104826.gif" alt="" width="36" height="36">
             </a>
             <p class="intro">牢记各个平台的登录凭证,如遇到打不开的情况,是拦截了,请等待即可,我们会即时更新。</p>
 
             <nav class="links" id="links" aria-label="常用网站">
                 <a class="site-link" data-site="0" href="http://rpvn67.eywe21.bdcdn.zjyxqb.cn/zz/hsfy96?ePxK" target="_blank" rel="noopener noreferrer" aria-label="打开 Google 搜索">
-                    <span class="site-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7.2 3.8c-.8-.5-1.8.1-1.8 1v14.4c0 .9 1 1.5 1.8 1l11.2-7.2a1.2 1.2 0 0 0 0-2L7.2 3.8Z"/></svg></span>
+                    <span class="site-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8.2 5.4c-.8-.5-1.8.1-1.8 1v11.2c0 .9 1 1.5 1.8 1l9.1-5.6a1.2 1.2 0 0 0 0-2L8.2 5.4Z"/></svg></span>
                     <span class="site-copy"><span class="site-name">太子视频点此进入</span><span class="site-description">日本 群交 约炮 偷情 深插母子 自慰 萝莉 巨人 母子  人妻 强奸 乱伦 出轨。</span></span>
                 </a>
                 <a class="site-link" data-site="1" href="http://kagjzh2t.gtwjev.cn/get-landing-url" target="_blank" rel="noopener noreferrer" aria-label="打开维基百科">
-                    <span class="site-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7.2 3.8c-.8-.5-1.8.1-1.8 1v14.4c0 .9 1 1.5 1.8 1l11.2-7.2a1.2 1.2 0 0 0 0-2L7.2 3.8Z"/></svg></span>
+                    <span class="site-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8.2 5.4c-.8-.5-1.8.1-1.8 1v11.2c0 .9 1 1.5 1.8 1l9.1-5.6a1.2 1.2 0 0 0 0-2L8.2 5.4Z"/></svg></span>
                     <span class="site-copy"><span class="site-name">宝岛视频点此进入</span><span class="site-description">劲爆 乱交 偷拍 迷奸 欧美 群交 日韩 国产 学生 萝莉 重口 欧美 丝袜 无码。</span></span>
                 </a>
                 <a class="site-link" data-site="2" href="https://monitor.api.vvfly.cn/appUserPhoto/697000-698000/697222/20250916000016.html?code=RhIoBvhb" target="_blank" rel="noopener noreferrer" aria-label="打开 YouTube">
-                    <span class="site-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7.2 3.8c-.8-.5-1.8.1-1.8 1v14.4c0 .9 1 1.5 1.8 1l11.2-7.2a1.2 1.2 0 0 0 0-2L7.2 3.8Z"/></svg></span>
+                    <span class="site-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8.2 5.4c-.8-.5-1.8.1-1.8 1v11.2c0 .9 1 1.5 1.8 1l9.1-5.6a1.2 1.2 0 0 0 0-2L8.2 5.4Z"/></svg></span>
                     <span class="site-copy"><span class="site-name">麻豆视频点此进入</span><span class="site-description">换妻 母子 父女 姐弟 母子 人兽  多P 人妖 制服 潮喷 拳交 明星SM。</span></span>
                 </a>
             </nav>
@@ -297,5 +314,23 @@
         </main>
 
     </div>
+    <script>
+        (() => {
+            // Replace these URLs in code to customize the seven-day background rotation.
+            const DAILY_BACKGROUNDS = [
+                "https://pub-5d9516ca10d842829497916b4eeb901b.r2.dev/photo_2025-06-13_00-20-02.jpg",
+                "https://888.x3x8.cc/%E4%B8%8A%E4%BC%A02.jpg",
+                "https://888.x3x8.cc/%E4%B8%8A%E4%BC%A0.jpg",
+                "https://pub-5d9516ca10d842829497916b4eeb901b.r2.dev/photo_2025-06-13_00-20-16.jpg",
+                "https://pub-59269f6abcf64dada6f3a88f29ad1192.r2.dev/photo_2025-06-13_00-20-21.jpg",
+                "https://pub-59269f6abcf64dada6f3a88f29ad1192.r2.dev/photo_2025-06-13_06-40-13.jpg",
+                "https://pub-5d9516ca10d842829497916b4eeb901b.r2.dev/photo_2025-06-13_00-20-21.jpg"
+            ];
+            const today = new Date();
+            const localDay = Math.floor(Date.UTC(today.getFullYear(), today.getMonth(), today.getDate()) / 86400000);
+            const imageIndex = ((localDay % DAILY_BACKGROUNDS.length) + DAILY_BACKGROUNDS.length) % DAILY_BACKGROUNDS.length;
+            document.documentElement.style.setProperty("--page-background-image", `url("${DAILY_BACKGROUNDS[imageIndex]}")`);
+        })();
+    </script>
 </body>
 </html>
